@@ -1,28 +1,31 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Scissors, Hammer, Palette, Globe, Target, Laptop, Languages } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations';
 
 const SkillsAndCertifications: React.FC = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   const certifications = [
     { title: "Indoor Skydiving Level 1", year: "2024" },
-    { title: "Yoga Teacher Training", year: "2022-2023" },
-    { title: "Ayurveda Abhangam Massage", year: "2023" },
+    { title: t.language === 'en' ? "Yoga Teacher Training" : t.language === 'de' ? "Yogalehrer Ausbildung" : "Yoga Eğitmenlik Eğitimi", year: "2022-2023" },
+    { title: t.language === 'en' ? "Ayurveda Abhangam Massage" : t.language === 'de' ? "Ayurveda Abhangam Massage" : "Ayurveda Abhangam Masaj Eğitimi", year: "2023" },
     { title: "Freediving Level 1", year: "2022" }
   ];
 
-  const technicalSkills = [
-    { name: "Digital Tools", icon: <Laptop className="w-5 h-5" />, items: ["Rhino", "AutoCAD", "Adobe Suite"] },
-    { name: "Production", icon: <Scissors className="w-5 h-5" />, items: ["Cutting", "Joining", "Shaping", "Assembling"] },
-    { name: "Material Craft", icon: <Hammer className="w-5 h-5" />, items: ["Leather Repair", "Ceramics", "Textile Tech"] },
-    { name: "Strategic", icon: <Target className="w-5 h-5" />, items: ["Creative Management", "Workflow Design", "Quality Control"] }
-  ];
+  const icons = [<Laptop className="w-5 h-5" />, <Scissors className="w-5 h-5" />, <Hammer className="w-5 h-5" />, <Target className="w-5 h-5" />];
 
-  const languages = [
-    { name: "German", level: "Native / Fluent", width: "100%" },
-    { name: "Turkish", level: "Native / Fluent", width: "100%" },
-    { name: "English", level: "Fluent", width: "90%" },
-    { name: "Spanish", level: "Intermediate", width: "60%" }
-  ];
+  const technicalSkills = t.skills.skillGroups.map((group, idx) => ({
+    ...group,
+    icon: icons[idx]
+  }));
+
+  const languages = t.skills.languages.map((lang, idx) => ({
+    ...lang,
+    width: idx === 0 || idx === 1 ? "100%" : idx === 2 ? "90%" : "60%"
+  }));
 
   return (
     <section id="skills" className="py-24 bg-white px-8">
@@ -31,7 +34,7 @@ const SkillsAndCertifications: React.FC = () => {
           {/* Skills & Languages */}
           <div className="space-y-16">
             <div>
-              <h2 className="text-4xl font-serif-display mb-8">Technical Studio</h2>
+              <h2 className="text-4xl font-serif-display mb-8">{t.skills.technicalTitle}</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {technicalSkills.map((skill, idx) => (
                   <motion.div 
@@ -58,7 +61,7 @@ const SkillsAndCertifications: React.FC = () => {
             <div className="space-y-8">
               <div className="flex items-center gap-3">
                 <Languages className="w-6 h-6" />
-                <h3 className="text-2xl font-serif-display">Languages</h3>
+                <h3 className="text-2xl font-serif-display">{t.skills.langTitle}</h3>
               </div>
               <div className="space-y-6 max-w-md">
                 {languages.map((lang, idx) => (
@@ -84,7 +87,7 @@ const SkillsAndCertifications: React.FC = () => {
           {/* Certifications & Philosophy */}
           <div className="space-y-16">
             <div>
-              <h2 className="text-4xl font-serif-display mb-8">Certifications</h2>
+              <h2 className="text-4xl font-serif-display mb-8">{t.skills.certTitle}</h2>
               <div className="space-y-4">
                 {certifications.map((cert, idx) => (
                   <motion.div 
@@ -108,9 +111,9 @@ const SkillsAndCertifications: React.FC = () => {
 
             <div className="p-10 bg-black text-white rounded-3xl space-y-6">
               <Palette className="w-8 h-8 text-[#6F6F6F]" />
-              <h3 className="text-3xl font-serif-display">Design Philosophy</h3>
+              <h3 className="text-3xl font-serif-display">{t.skills.philosophyTitle}</h3>
               <p className="text-[#6F6F6F] font-inter leading-relaxed">
-                Applying creative ideas to product manufacturing with a focus on hands-on learning. My multidisciplinary background in fashion, ceramics, and leather production allows me to bridge the gap between technical design and technical challenges.
+                {t.skills.philosophyText}
               </p>
             </div>
           </div>

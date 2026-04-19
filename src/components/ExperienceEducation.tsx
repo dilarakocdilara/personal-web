@@ -1,48 +1,14 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations';
 
 const ExperienceEducation: React.FC = () => {
-  const education = [
-    {
-      year: "2024 – Present",
-      title: "B.Eng. in Product Development and Technical Design",
-      location: "University of Applied Sciences Frankfurt",
-      description: "Focusing on creative application in product manufacturing and technical design."
-    },
-    {
-      year: "2018 – 2019",
-      title: "Fachoberschule Frankfurt",
-      location: "Specialization: Textile and Clothing Technology",
-      description: "Advanced technical certificate in textile and design fundamentals."
-    },
-    {
-      year: "2015 – 2018",
-      title: "Certified Clothing Technician",
-      location: "State-Recognized Vocational School Aschaffenburg",
-      description: "Bekleidungstechnischer Assistent — Comprehensive training in textile production."
-    }
-  ];
+  const { language } = useLanguage();
+  const t = translations[language];
 
-  const experience = [
-    {
-      year: "2020 – 2021",
-      title: "Creative Management",
-      location: "Green MNKY",
-      description: "Social media management, video and photo editing, product storytelling, and TikTok content creation."
-    },
-    {
-      year: "2017",
-      title: "Wedding Dress Seamstress",
-      location: "Izmir, Turkey",
-      description: "Concept Designer, Alterations Specialist, and high-end technical garment construction."
-    },
-    {
-      year: "2014 – 2020",
-      title: "Technical Craftsmanship & Retail",
-      location: "Various Locations",
-      description: "Repairing leather goods at a leather factory; contributing to production processes at a Ceramic Manufacturer; Multifaceted Sales Professional."
-    }
-  ];
+  const education = t.experience.eduItems;
+  const experience = t.experience.expItems;
 
   return (
     <section id="experience" className="py-24 bg-[#FAFAFA] px-8">
@@ -50,7 +16,7 @@ const ExperienceEducation: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           {/* Education */}
           <div>
-            <h2 className="text-4xl font-serif-display mb-12">Education</h2>
+            <h2 className="text-4xl font-serif-display mb-12">{t.experience.educationTitle}</h2>
             <div className="space-y-12">
               {education.map((item, idx) => (
                 <motion.div 
@@ -73,7 +39,7 @@ const ExperienceEducation: React.FC = () => {
 
           {/* Experience */}
           <div>
-            <h2 className="text-4xl font-serif-display mb-12">Experience</h2>
+            <h2 className="text-4xl font-serif-display mb-12">{t.experience.experienceTitle}</h2>
             <div className="space-y-12">
               {experience.map((item, idx) => (
                 <motion.div 

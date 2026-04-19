@@ -1,15 +1,20 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Instagram } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations';
 
 const Gallery: React.FC = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   const images = [
-    { seed: 'yoga-pose-1', title: 'Flow & Movement', category: 'Yoga' },
-    { seed: 'ceramics-process', title: 'Hand-crafted Ceramics', category: 'Craft' },
-    { seed: 'studio-design', title: 'Technical Drafting', category: 'Design' },
-    { seed: 'yoga-nature', title: 'Outdoor Practice', category: 'Movement' },
-    { seed: 'leather-work', title: 'Material Studies', category: 'Leather' },
-    { seed: 'industrial-design', title: 'CAD Visualization', category: 'Product' },
+    { seed: 'yoga-pose-1', title: t.gallery.items[0].title, category: t.gallery.categories.yoga },
+    { seed: 'ceramics-process', title: t.gallery.items[1].title, category: t.gallery.categories.craft },
+    { seed: 'studio-design', title: t.gallery.items[2].title, category: t.gallery.categories.design },
+    { seed: 'yoga-nature', title: t.gallery.items[3].title, category: t.gallery.categories.movement },
+    { seed: 'leather-work', title: t.gallery.items[4].title, category: t.gallery.categories.leather },
+    { seed: 'industrial-design', title: t.gallery.items[5].title, category: t.gallery.categories.product },
   ];
 
   return (
@@ -17,8 +22,8 @@ const Gallery: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-end mb-12">
           <div>
-            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#6F6F6F]">Visual Journal</span>
-            <h2 className="text-4xl sm:text-5xl font-serif-display mt-2">Captured Moments</h2>
+            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#6F6F6F]">{t.gallery.label}</span>
+            <h2 className="text-4xl sm:text-5xl font-serif-display mt-2">{t.gallery.title}</h2>
           </div>
           <a 
             href="https://instagram.com/der.lara.yoga" 

@@ -1,8 +1,13 @@
 import React from 'react';
 import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations';
 
 const Footer: React.FC = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <footer className="bg-white border-t border-black/5 py-16 px-8">
       <div className="max-w-7xl mx-auto">
@@ -10,12 +15,12 @@ const Footer: React.FC = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-serif-display">Dilara Koç<sup className="text-xs">®</sup></h3>
             <p className="text-[#6F6F6F] font-inter leading-relaxed max-w-xs">
-              Product Developer and Technical Designer exploring the boundaries between the physical and digital.
+              {t.footer.description}
             </p>
           </div>
           
           <div className="space-y-6">
-            <h4 className="text-xs uppercase tracking-widest font-semibold text-black">Contact</h4>
+            <h4 className="text-xs uppercase tracking-widest font-semibold text-black">{t.contact.emailLabel && t.contact.phoneLabel ? 'Contact' : 'Kontakt'}</h4>
             <div className="space-y-4 font-inter text-[#6F6F6F]">
               <a href="mailto:contact@derlara.uk" className="flex items-center gap-3 hover:text-black transition-colors">
                 <Mail className="w-4 h-4" />
@@ -27,7 +32,7 @@ const Footer: React.FC = () => {
               </a>
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4" />
-                Aschaffenburg, Germany
+                {t.contact.address}
               </div>
             </div>
           </div>
@@ -44,9 +49,9 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#6F6F6F] uppercase tracking-widest font-medium">
-          <p>© 2026 Dilara Koç. Built for the Eternal.</p>
+          <p>{t.footer.built}</p>
           <div className="flex gap-8">
-            <Link to="/privacy" className="hover:text-black transition-colors">Privacy</Link>
+            <Link to="/privacy" className="hover:text-black transition-colors">{t.nav.privacy}</Link>
           </div>
         </div>
       </div>

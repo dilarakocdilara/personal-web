@@ -1,9 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'motion/react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations';
+import { Globe } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
+  const { language, setLanguage } = useLanguage();
+  const t = translations[language];
   const videoRef = useRef<HTMLVideoElement>(null);
   const [opacity, setOpacity] = useState(0);
+  const [langMenuOpen, setLangMenuOpen] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -59,12 +65,40 @@ const HeroSection: React.FC = () => {
           Dilara Koç<sup className="text-[10px] ml-0.5">®</sup>
         </div>
         <div className="hidden md:flex gap-10 items-center text-[13px] font-medium">
-          <a href="#about" className="text-black transition-colors">Home</a>
-          <a href="#experience" className="text-[#6F6F6F] hover:text-black transition-colors">Journey</a>
-          <a href="#gallery" className="text-[#6F6F6F] hover:text-black transition-colors">Gallery</a>
-          <a href="#skills" className="text-[#6F6F6F] hover:text-black transition-colors">Skills</a>
+          <a href="#about" className="text-black transition-colors">{t.nav.home}</a>
+          <a href="#experience" className="text-[#6F6F6F] hover:text-black transition-colors">{t.nav.journey}</a>
+          <a href="#gallery" className="text-[#6F6F6F] hover:text-black transition-colors">{t.nav.gallery}</a>
+          <a href="#skills" className="text-[#6F6F6F] hover:text-black transition-colors">{t.nav.skills}</a>
+          
+          {/* Language Switcher */}
+          <div className="relative">
+            <button 
+              onClick={() => setLangMenuOpen(!langMenuOpen)}
+              className="flex items-center gap-2 text-[#6F6F6F] hover:text-black transition-colors uppercase tracking-widest text-[10px] font-bold"
+            >
+              <Globe className="w-3.5 h-3.5" />
+              {language}
+            </button>
+            {langMenuOpen && (
+              <div className="absolute top-full right-0 mt-2 bg-white border border-black/5 rounded-xl shadow-xl py-2 min-w-[100px] z-50 overflow-hidden">
+                {(['en', 'de', 'tr'] as const).map((lang) => (
+                  <button
+                    key={lang}
+                    onClick={() => {
+                      setLanguage(lang);
+                      setLangMenuOpen(false);
+                    }}
+                    className={`w-full text-left px-4 py-2 text-[10px] uppercase tracking-widest font-bold hover:bg-[#FAFAFA] transition-colors ${language === lang ? 'text-black' : 'text-[#6F6F6F]'}`}
+                  >
+                    {lang === 'en' ? 'English' : lang === 'de' ? 'Deutsch' : 'Türkçe'}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
           <a href="#contact" className="bg-black text-white px-7 py-3 rounded-full hover:scale-105 transition-all duration-300 text-xs font-semibold">
-            Reach Me
+            {t.nav.reachMe}
           </a>
         </div>
       </nav>
@@ -73,22 +107,21 @@ const HeroSection: React.FC = () => {
       <main className="relative z-40 flex flex-col items-center justify-center text-center px-10 pt-16">
         
         <h1 className="text-5xl sm:text-7xl md:text-8xl max-w-[900px] font-normal font-serif-display leading-[0.92] tracking-[-2.46px] text-black animate-fade-rise">
-          Beyond <span className="font-serif-italic text-[#6F6F6F]">silence,</span><br/>
-          we build the <span className="font-serif-italic text-[#6F6F6F]">eternal.</span>
+          {t.hero.headlineMain} <span className="font-serif-italic text-[#6F6F6F]">{t.hero.headlineSilence}</span><br/>
+          {t.hero.headlineBuild} <span className="font-serif-italic text-[#6F6F6F]">{t.hero.headlineEternal}</span>
         </h1>
 
         <p className="text-lg max-w-[620px] mt-10 leading-relaxed text-[#6F6F6F] font-light animate-fade-rise-delay">
-          Product Developer and Technical Designer currently at Frankfurt UAS. 
-          From the tactile art of ceramics to technical automotive design, 
-          I craft digital and physical havens for deep work and pure flows.
+          {t.hero.description}
         </p>
 
         <motion.button 
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.98 }}
+          onClick={() => document.getElementById('gallery')?.scrollIntoView({ behavior: 'smooth' })}
           className="bg-black text-white px-14 py-5 rounded-full mt-10 text-[15px] tracking-wide transition-transform animate-fade-rise-delay-2"
         >
-          View Portfolio
+          {t.hero.cta}
         </motion.button>
       </main>
 

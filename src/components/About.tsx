@@ -1,7 +1,12 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../translations';
 
 const About: React.FC = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section id="about" className="py-24 bg-white px-8">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
@@ -11,18 +16,16 @@ const About: React.FC = () => {
           viewport={{ once: true }}
           className="flex-1 space-y-8"
         >
-          <h2 className="text-4xl sm:text-5xl font-serif-display">About Dilara</h2>
+          <h2 className="text-4xl sm:text-5xl font-serif-display">{t.about.title}</h2>
           <p className="text-lg text-[#6F6F6F] leading-relaxed max-w-xl">
-            I am Dilara Koç, currently pursuing a Bachelor’s degree in Product Development and Technical Design at the University of Applied Sciences Frankfurt. 
-            I’m passionate about applying creative ideas to product manufacturing and hands-on learning.
+            {t.about.p1}
           </p>
           <p className="text-lg text-[#6F6F6F] leading-relaxed max-w-xl">
-            My background in fashion, ceramics, and leather production provides a strong foundation for adapting to new technical challenges. 
-            I believe in the intersection of traditional craftsmanship and modern technical design.
+            {t.about.p2}
           </p>
           <div className="flex gap-4 items-center">
             <div className="w-12 h-[1px] bg-black"></div>
-            <span className="text-sm uppercase tracking-widest text-black font-semibold">Creator & Designer</span>
+            <span className="text-sm uppercase tracking-widest text-black font-semibold">{t.about.role}</span>
           </div>
         </motion.div>
         
@@ -41,7 +44,7 @@ const About: React.FC = () => {
             />
           </div>
           <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-black text-white p-6 rounded-full flex flex-col justify-center items-center text-center animate-pulse">
-            <span className="text-xs uppercase font-inter tracking-tighter">B.Eng. Student</span>
+            <span className="text-xs uppercase font-inter tracking-tighter">{t.about.student}</span>
           </div>
         </motion.div>
       </div>

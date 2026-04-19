@@ -41,16 +41,20 @@ const MainContent = () => {
   );
 };
 
+import { LanguageProvider } from './context/LanguageContext';
+
 export default function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="min-h-screen bg-white selection:bg-black selection:text-white">
-        <Routes>
-          <Route path="/" element={<MainContent />} />
-          <Route path="/privacy" element={<PrivacyPage />} />
-        </Routes>
-      </div>
-    </Router>
+    <LanguageProvider>
+      <Router>
+        <ScrollToTop />
+        <div className="min-h-screen bg-white selection:bg-black selection:text-white">
+          <Routes>
+            <Route path="/" element={<MainContent />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
+          </Routes>
+        </div>
+      </Router>
+    </LanguageProvider>
   );
 }
