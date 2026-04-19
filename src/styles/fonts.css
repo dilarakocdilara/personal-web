@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+.font-serif-display {
+  font-family: 'Georgia', serif;
+  font-style: normal;
+}
+
+.font-serif-italic {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}

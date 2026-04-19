@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "./styles/fonts.css";
+@import "./styles/theme.css";
+
+@theme {
+  --font-serif-display: "Georgia", serif;
+  --font-serif-italic: "Georgia", serif;
+  --font-inter: "Inter", sans-serif;
+}
