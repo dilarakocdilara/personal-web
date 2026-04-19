@@ -60,9 +60,9 @@ const HeroSection: React.FC = () => {
         </div>
         <div className="hidden md:flex gap-10 items-center text-[13px] font-medium">
           <a href="#about" className="text-black transition-colors">Home</a>
-          <a href="#about" className="text-[#6F6F6F] hover:text-black transition-colors">Education</a>
-          <a href="#experience" className="text-[#6F6F6F] hover:text-black transition-colors">Experience</a>
-          <a href="#skills" className="text-[#6F6F6F] hover:text-black transition-colors">Yoga</a>
+          <a href="#experience" className="text-[#6F6F6F] hover:text-black transition-colors">Journey</a>
+          <a href="#gallery" className="text-[#6F6F6F] hover:text-black transition-colors">Gallery</a>
+          <a href="#skills" className="text-[#6F6F6F] hover:text-black transition-colors">Skills</a>
           <button className="bg-black text-white px-7 py-3 rounded-full hover:scale-105 transition-all duration-300 text-xs font-semibold">
             Reach Us
           </button>
