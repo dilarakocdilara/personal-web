@@ -7,19 +7,19 @@ const ExperienceEducation: React.FC = () => {
       year: "2024 – Present",
       title: "B.Eng. in Product Development and Technical Design",
       location: "University of Applied Sciences Frankfurt",
-      description: "Focusing on innovative product manufacturing and technical design processes."
+      description: "Focusing on creative application in product manufacturing and technical design."
     },
     {
       year: "2018 – 2019",
       title: "Fachoberschule Frankfurt",
       location: "Specialization: Textile and Clothing Technology",
-      description: "Deepening knowledge in material science and textile processing."
+      description: "Advanced technical certificate in textile and design fundamentals."
     },
     {
       year: "2015 – 2018",
       title: "Certified Clothing Technician",
       location: "State-Recognized Vocational School Aschaffenburg",
-      description: "Bekleidungstechnischer Assistent."
+      description: "Bekleidungstechnischer Assistent — Comprehensive training in textile production."
     }
   ];
 
@@ -28,19 +28,19 @@ const ExperienceEducation: React.FC = () => {
       year: "2020 – 2021",
       title: "Creative Management",
       location: "Green MNKY",
-      description: "Responsible for social content, video editing, products photography, and leading TikTok content creation."
+      description: "Social media management, video and photo editing, product storytelling, and TikTok content creation."
     },
     {
       year: "2017",
       title: "Wedding Dress Seamstress",
       location: "Izmir, Turkey",
-      description: "Concept Designer, Alterations Specialist, and Maker."
+      description: "Concept Designer, Alterations Specialist, and high-end technical garment construction."
     },
     {
       year: "2014 – 2020",
-      title: "Diverse Technical Roles",
+      title: "Technical Craftsmanship & Retail",
       location: "Various Locations",
-      description: "Repairing leather shoes, bags, and belts; ceramic manufacturing contribution; sales professional in diverse markets."
+      description: "Repairing leather goods at a leather factory; contributing to production processes at a Ceramic Manufacturer; Multifaceted Sales Professional."
     }
   ];
 

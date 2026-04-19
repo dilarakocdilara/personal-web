@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -16,9 +17,9 @@ const Footer: React.FC = () => {
           <div className="space-y-6">
             <h4 className="text-xs uppercase tracking-widest font-semibold text-black">Contact</h4>
             <div className="space-y-4 font-inter text-[#6F6F6F]">
-              <a href="mailto:dilara@derlara.com" className="flex items-center gap-3 hover:text-black transition-colors">
+              <a href="mailto:contact@derlara.uk" className="flex items-center gap-3 hover:text-black transition-colors">
                 <Mail className="w-4 h-4" />
-                dilara@derlara.com
+                contact@derlara.uk
               </a>
               <a href="tel:+4916095210695" className="flex items-center gap-3 hover:text-black transition-colors">
                 <Phone className="w-4 h-4" />
@@ -45,8 +46,7 @@ const Footer: React.FC = () => {
         <div className="pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#6F6F6F] uppercase tracking-widest font-medium">
           <p>© 2026 Dilara Koç. Built for the Eternal.</p>
           <div className="flex gap-8">
-            <a href="#" className="hover:text-black transition-colors">Imprint</a>
-            <a href="#" className="hover:text-black transition-colors">Privacy</a>
+            <Link to="/privacy" className="hover:text-black transition-colors">Privacy</Link>
           </div>
         </div>
       </div>
