@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, MapPin, Send } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
 
@@ -28,16 +28,6 @@ const Contact: React.FC = () => {
                 <div>
                   <p className="text-[10px] uppercase tracking-widest text-[#6F6F6F] font-bold">{t.contact.emailLabel}</p>
                   <a href="mailto:contact@derlara.uk" className="text-lg font-inter">contact@derlara.uk</a>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 group">
-                <div className="w-12 h-12 rounded-full border border-black/5 flex items-center justify-center group-hover:bg-black group-hover:text-white transition-all duration-300">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <div>
-                  <p className="text-[10px] uppercase tracking-widest text-[#6F6F6F] font-bold">{t.contact.phoneLabel}</p>
-                  <a href="tel:+4916095210695" className="text-lg font-inter">+49 160 95210695</a>
                 </div>
               </div>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
@@ -30,10 +30,6 @@ const Footer: React.FC = () => {
               <a href="mailto:contact@derlara.uk" className="flex items-center gap-3 hover:text-black transition-colors">
                 <Mail className="w-4 h-4" />
                 contact@derlara.uk
-              </a>
-              <a href="tel:+4916095210695" className="flex items-center gap-3 hover:text-black transition-colors">
-                <Phone className="w-4 h-4" />
-                +49 160 95210695
               </a>
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4" />

@@ -111,7 +111,6 @@ export const translations = {
       title: "Let's Connect",
       description: "Whether you have a question about my technical design process, want to discuss a potential collaboration, or just want to say hi, my inbox is always open.",
       emailLabel: "Email",
-      phoneLabel: "Phone",
       locationLabel: "Location",
       address: "Aschaffenburg, Germany",
       form: {
@@ -268,7 +267,6 @@ export const translations = {
       title: "Verbinden wir uns",
       description: "Egal, ob Sie eine Frage zu meinem technischen Designprozess haben, eine potenzielle Zusammenarbeit besprechen möchten oder einfach nur Hallo sagen wollen – mein Posteingang ist immer offen.",
       emailLabel: "E-Mail",
-      phoneLabel: "Telefon",
       locationLabel: "Standort",
       address: "Aschaffenburg, Deutschland",
       form: {
@@ -425,7 +423,6 @@ export const translations = {
       title: "Bağlantı Kuralım",
       description: "Teknik tasarım sürecim hakkında bir sorunuz varsa, potansiyel bir işbirliğini tartışmak istiyorsanız veya sadece merhaba demek istiyorsanız, kapım her zaman açık.",
       emailLabel: "E-post",
-      phoneLabel: "Telefon",
       locationLabel: "Konum",
       address: "Aschaffenburg, Almanya",
       form: {
@@ -582,7 +579,6 @@ export const translations = {
       title: "Conectemos",
       description: "Si tienes alguna pregunta sobre mi proceso de diseño técnico, quieres discutir una posible colaboración o simplemente saludar, mi bandeja de entrada siempre está abierta.",
       emailLabel: "Email",
-      phoneLabel: "Teléfono",
       locationLabel: "Ubicación",
       address: "Aschaffenburg, Alemania",
       form: {
