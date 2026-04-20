@@ -37,10 +37,9 @@ const About: React.FC = () => {
         >
           <div className="absolute inset-0 bg-gray-100 rounded-2xl overflow-hidden shadow-2xl">
             <img 
-              src="https://picsum.photos/seed/dilara-portrait/800/1000" 
+              src="/IMG_4896.jpg" 
               alt="Dilara Koç" 
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
-              referrerPolicy="no-referrer"
             />
           </div>
           <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-black text-white p-6 rounded-full flex flex-col justify-center items-center text-center animate-pulse">
