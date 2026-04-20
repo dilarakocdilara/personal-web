@@ -37,7 +37,7 @@ const About: React.FC = () => {
         >
           <div className="absolute inset-0 bg-gray-100 rounded-2xl overflow-hidden shadow-2xl">
             <img 
-              src="/IMG_4896.jpg" 
+              src="/IMG_4896.jpeg" 
               alt="Dilara Koç" 
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
             />
