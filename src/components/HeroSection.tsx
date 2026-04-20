@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'motion/react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../translations';
-import { Globe } from 'lucide-react';
 
 const HeroSection: React.FC = () => {
   const { language, setLanguage } = useLanguage();
@@ -76,21 +75,26 @@ const HeroSection: React.FC = () => {
               onClick={() => setLangMenuOpen(!langMenuOpen)}
               className="flex items-center gap-2 text-[#6F6F6F] hover:text-black transition-colors uppercase tracking-widest text-[10px] font-bold"
             >
-              <Globe className="w-3.5 h-3.5" />
+              <span className="text-sm grayscale-[0.5] group-hover:grayscale-0 transition-all">
+                {language === 'en' ? '🇬🇧' : language === 'de' ? '🇩🇪' : language === 'tr' ? '🇹🇷' : '🇪🇸'}
+              </span>
               {language}
             </button>
             {langMenuOpen && (
-              <div className="absolute top-full right-0 mt-2 bg-white border border-black/5 rounded-xl shadow-xl py-2 min-w-[100px] z-50 overflow-hidden">
-                {(['en', 'de', 'tr'] as const).map((lang) => (
+              <div className="absolute top-full right-0 mt-4 bg-white border border-black/5 rounded-2xl shadow-2xl py-3 min-w-[140px] z-50 overflow-hidden backdrop-blur-sm">
+                {(['en', 'de', 'tr', 'es'] as const).map((lang) => (
                   <button
                     key={lang}
                     onClick={() => {
                       setLanguage(lang);
                       setLangMenuOpen(false);
                     }}
-                    className={`w-full text-left px-4 py-2 text-[10px] uppercase tracking-widest font-bold hover:bg-[#FAFAFA] transition-colors ${language === lang ? 'text-black' : 'text-[#6F6F6F]'}`}
+                    className={`w-full text-left px-5 py-3 text-[10px] uppercase tracking-[0.15em] font-bold hover:bg-[#FAFAFA] transition-all flex items-center justify-between group ${language === lang ? 'text-black' : 'text-[#6F6F6F]'}`}
                   >
-                    {lang === 'en' ? 'English' : lang === 'de' ? 'Deutsch' : 'Türkçe'}
+                    <span>{lang === 'en' ? 'English' : lang === 'de' ? 'Deutsch' : lang === 'tr' ? 'Türkçe' : 'Español'}</span>
+                    <span className="text-base grayscale group-hover:grayscale-0 transition-all">
+                      {lang === 'en' ? '🇬🇧' : lang === 'de' ? '🇩🇪' : lang === 'tr' ? '🇹🇷' : '🇪🇸'}
+                    </span>
                   </button>
                 ))}
               </div>

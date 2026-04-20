@@ -129,24 +129,28 @@ export const translations = {
       built: "© 2026 Dilara Koç. Built for the Eternal."
     },
     privacy: {
-      title: "Privacy Policy",
+      title: "Privacy Policy (GDPR)",
       back: "Back to Home",
       sections: [
         {
-          title: "1. General Information",
-          content: "This privacy policy informs you about the type, scope, and purpose of the processing of personal data within my website and the associated functions and content."
+          title: "1. Data Controller",
+          content: "The responsible party for data processing on this website is: Dilara Koç, Aschaffenburg, Germany. Email: contact@derlara.uk."
         },
         {
-          title: "2. Data Collection",
-          content: "When you use the contact form, the data you enter is sent to me via Web3Forms. This data includes your name, email address, and the content of your message. I only use this data to process your request and communicate with you."
+          title: "2. Scope of Processing",
+          content: "We process personal data provided via our contact form (Name, Email, Message). This processing is based on Art. 6(1)(b) GDPR for responding to your inquiries."
         },
         {
-          title: "3. External Services",
-          content: "I use Web3Forms to provide the contact form functionality. By submitting the form, you agree that your data will be processed by Web3Forms in accordance with their privacy policy. I do not use tracking cookies or third-party analytics services on this website."
+          title: "3. Third-Party Services (Web3Forms)",
+          content: "For form submissions, we use Web3Forms. Your data is transmitted to them securely for the sole purpose of delivery to my inbox. No tracking cookies are used."
         },
         {
-          title: "4. Your Rights",
-          content: "You have the right to receive information about the personal data stored about you at any time. You also have the right to correct, block, or delete this data. Please contact me at contact@derlara.uk for any inquiries regarding your data."
+          title: "4. Your Rights under GDPR",
+          content: "As a resident of the EEU/EU, you have the right to: Access (Art. 15), Rectification (Art. 16), Erasure (Art. 17), Restriction (Art. 18), and Data Portability (Art. 20). You also have the right to lodge a complaint with a supervisory authority (Art. 77)."
+        },
+        {
+          title: "5. Data Retention",
+          content: "Contact information is stored only as long as necessary to fulfill the purpose of your inquiry or until you request its deletion."
         }
       ],
       date: "Effective Date: April 19, 2026"
@@ -282,24 +286,28 @@ export const translations = {
       built: "© 2026 Dilara Koç. Erbaut für das Ewige."
     },
     privacy: {
-      title: "Datenschutzerklärung",
+      title: "Datenschutzerklärung (DSGVO)",
       back: "Zurück zur Startseite",
       sections: [
         {
-          title: "1. Allgemeine Informationen",
-          content: "Diese Datenschutzerklärung informiert Sie über die Art, den Umfang und den Zweck der Verarbeitung von personenbezogenen Daten innerhalb meiner Website und der damit verbundenen Funktionen und Inhalte."
+          title: "1. Verantwortliche Stelle",
+          content: "Verantwortlich für die Datenverarbeitung auf dieser Website ist: Dilara Koç, Aschaffenburg, Deutschland. E-Mail: contact@derlara.uk."
         },
         {
-          title: "2. Datenerfassung",
-          content: "Wenn Sie das Kontaktformular nutzen, werden die von Ihnen eingegebenen Daten über Web3Forms an mich gesendet. Diese Daten umfassen Ihren Namen, Ihre E-Mail-Adresse und den Inhalt Ihrer Nachricht. Ich verwende diese Daten nur, um Ihre Anfrage zu bearbeiten und mit Ihnen zu kommunizieren."
+          title: "2. Umfang der Verarbeitung",
+          content: "Wir verarbeiten personenbezogene Daten, die über unser Kontaktformular bereitgestellt werden (Name, E-Mail, Nachricht). Diese Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO zur Beantwortung Ihrer Anfragen."
         },
         {
-          title: "3. Externe Dienste",
-          content: "Ich nutze Web3Forms, um die Funktionalität des Kontaktformulars bereitzustellen. Durch das Absenden des Formulars erklären Sie sich damit einverstanden, dass Ihre Daten von Web3Forms gemäß deren Datenschutzerklärung verarbeitet werden. Ich verwende auf dieser Website keine Tracking-Cookies oder Analysedienste von Drittanbietern."
+          title: "3. Drittanbieter (Web3Forms)",
+          content: "Für Formularübermittlungen nutzen wir Web3Forms. Ihre Daten werden sicher an diese übertragen, ausschließlich zum Zweck der Zustellung in meinen Posteingang. Es werden keine Tracking-Cookies verwendet."
         },
         {
-          title: "4. Ihre Rechte",
-          content: "Sie haben jederzeit das Recht, Auskunft über die zu Ihrer Person gespeicherten Daten zu erhalten. Sie haben außerdem das Recht auf Berichtigung, Sperrung oder Löschung dieser Daten. Bitte kontaktieren Sie mich unter contact@derlara.uk für Anfragen zu Ihren Daten."
+          title: "4. Ihre Rechte nach DSGVO",
+          content: "Sie haben das Recht auf: Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18) und Datenübertragbarkeit (Art. 20). Außerdem haben Sie das Recht auf Beschwerde bei einer Aufsichtsbehörde (Art. 77)."
+        },
+        {
+          title: "5. Speicherdauer",
+          content: "Kontaktinformationen werden nur so lange gespeichert, wie es zur Erfüllung des Zwecks Ihrer Anfrage erforderlich ist oder bis Sie die Löschung verlangen."
         }
       ],
       date: "Stand: 19. April 2026"
@@ -435,27 +443,188 @@ export const translations = {
       built: "© 2026 Dilara Koç. Ebedi olan için inşa edildi."
     },
     privacy: {
-      title: "Gizlilik Politikası",
+      title: "Gizlilik Politikası (KVKK/GDPR)",
       back: "Ana Sayfaya Dön",
       sections: [
         {
-          title: "1. Genel Bilgiler",
-          content: "Bu gizlilik politikası, web sitemizdeki ve ilgili fonksiyonlardaki kişisel verilerin işlenme türü, kapsamı ve amacı hakkında sizi bilgilendirir."
+          title: "1. Veri Sorumlusu",
+          content: "Bu web sitesindeki veri işleme süreçlerinden sorumlu kişi: Dilara Koç, Aschaffenburg, Almanya. E-posta: contact@derlara.uk."
         },
         {
-          title: "2. Veri Toplama",
-          content: "İletişim formunu kullandığınızda, girdiğiniz veriler Web3Forms aracılığıyla bana gönderilir. Bu veriler adınızı, e-posta adresinizi ve mesajınızın içeriğini içerir. Bu verileri yalnızca talebinizi işleme koymak ve sizinle iletişim kurmak için kullanırım."
+          title: "2. İşleme Kapsamı",
+          content: "İletişim formumuz aracılığıyla sağlanan kişisel verileri (İsim, E-posta, Mesaj) işliyoruz. Bu işleme, taleplerinize yanıt vermek amacıyla GDPR Madde 6(1)(b) uyarınca gerçekleştirilir."
         },
         {
-          title: "3. Harici Servisler",
-          content: "İletişim formu işlevselliğini sağlamak için Web3Forms kullanıyorum. Formu göndererek, verilerinizin Web3Forms tarafından gizlilik politikalarına uygun olarak işlenmesini kabul etmiş olursunuz. Bu web sitesinde takip çerezleri veya üçüncü taraf analiz hizmetleri kullanmıyorum."
+          title: "3. Üçüncü Taraf Hizmetleri (Web3Forms)",
+          content: "Form gönderimleri için Web3Forms kullanıyoruz. Verileriniz, yalnızca e-posta kutuma ulaştırılması amacıyla güvenli bir şekilde aktarılır. Takip çerezleri kullanılmamaktadır."
         },
         {
           title: "4. Haklarınız",
-          content: "Hakkınızda saklanan kişisel veriler hakkında istediğiniz zaman bilgi alma hakkına sahipsiniz. Ayrıca bu verileri düzeltme, engelleme veya silme hakkınız da vardır. Verilerinizle ilgili her türlü soru için lütfen contact@derlara.uk adresinden benimle iletişime geçin."
+          content: "GDPR uyarınca şu haklara sahipsiniz: Bilgi Alma (Madde 15), Düzeltme (Madde 16), Silme (Madde 17), Kısıtlama (Madde 18) ve Veri Taşınabilirliği (Madde 20). Ayrıca denetleyici bir makama şikayette bulunma hakkınız vardır (Madde 77)."
+        },
+        {
+          title: "5. Veri Saklama Süresi",
+          content: "İletişim bilgileri, yalnızca talebinizin amacını yerine getirmek için gerekli olduğu sürece veya siz silinmesini talep edene kadar saklanır."
         }
       ],
       date: "Yürürlük Tarihi: 19 Nisan 2026"
+    }
+  },
+  es: {
+    nav: {
+      home: "Inicio",
+      journey: "Trayectoria",
+      gallery: "Galería",
+      skills: "Habilidades",
+      privacy: "Privacidad",
+      reachMe: "Contactar"
+    },
+    hero: {
+      headlineMain: "Más allá del",
+      headlineSilence: "silencio,",
+      headlineBuild: "construimos lo",
+      headlineEternal: "eterno.",
+      description: "Desarrolladora de Productos y Diseñadora Técnica actualmente en Frankfurt UAS. Desde el arte táctil de la cerámica hasta el diseño técnico automotriz, creo refugios digitales y físicos para el trabajo profundo y el flujo puro.",
+      cta: "Ver Portafolio"
+    },
+    about: {
+      title: "Sobre Dilara",
+      p1: "Soy Dilara Koç, actualmente cursando un Grado en Desarrollo de Productos y Diseño Técnico en la Universidad de Ciencias Aplicadas de Frankfurt. Me apasiona aplicar ideas creativas a la fabricación de productos y el aprendizaje práctico.",
+      p2: "Mi experiencia en moda, cerámica y producción de cuero proporciona una base sólida para adaptarme a nuevos desafíos técnicos. Creo en la intersección entre la artesanía tradicional y el diseño técnico moderno.",
+      role: "Creadora y Diseñadora",
+      student: "Estudiante de B.Eng."
+    },
+    experience: {
+      educationTitle: "Educación",
+      experienceTitle: "Experiencia",
+      eduItems: [
+        {
+          year: "2024 – Presente",
+          title: "B.Eng. en Desarrollo de Productos y Diseño Técnico",
+          location: "Universidad de Ciencias Aplicadas de Frankfurt",
+          description: "Enfoque en la aplicación creativa en la fabricación de productos y diseño técnico."
+        },
+        {
+          year: "2018 – 2019",
+          title: "Fachoberschule Frankfurt",
+          location: "Especialización: Tecnología Textil y del Vestido",
+          description: "Certificado técnico avanzado en fundamentos de textil y diseño."
+        },
+        {
+          year: "2015 – 2018",
+          title: "Técnica de Confección Certificada",
+          location: "Escuela Profesional de Aschaffenburg",
+          description: "Asistente Técnica de Confección — Formación integral en producción textil."
+        }
+      ],
+      expItems: [
+        {
+          year: "2020 – 2021",
+          title: "Gestión Creativa",
+          location: "Green MNKY",
+          description: "Gestión de redes sociales, edición de video y fotos, narración de productos y creación de contenido para TikTok."
+        },
+        {
+          year: "2017",
+          title: "Costurera de Vestidos de Novia",
+          location: "Esmirna, Turquía",
+          description: "Diseñadora de Conceptos, Especialista en Arreglos y construcción técnica de prendas de alta gama."
+        },
+        {
+          year: "2014 – 2020",
+          title: "Artesanía Técnica y Comercio",
+          location: "Varias Ubicaciones",
+          description: "Reparación de artículos de cuero en una fábrica de cuero; contribución a los procesos de producción en un fabricante de cerámica; Profesional de Ventas multifacética."
+        }
+      ]
+    },
+    gallery: {
+      label: "Diario Visual",
+      title: "Momentos Capturados",
+      categories: {
+        yoga: "Yoga",
+        craft: "Artesanía",
+        design: "Diseño",
+        movement: "Movimiento",
+        leather: "Cuero",
+        product: "Producto"
+      },
+      items: [
+        { title: "Flujo y Movimiento" },
+        { title: "Cerámica Artesanal" },
+        { title: "Redacción Técnica" },
+        { title: "Práctica al Aire Libre" },
+        { title: "Estudios de Materiales" },
+        { title: "Visualización CAD" }
+      ]
+    },
+    skills: {
+      technicalTitle: "Estudio Técnico",
+      certTitle: "Certificaciones",
+      langTitle: "Idiomas",
+      philosophyTitle: "Filosofía de Diseño",
+      philosophyText: "Aplicar ideas creativas a la fabricación de productos con un enfoque en el aprendizaje práctico. Mi formación multidisciplinaria en moda, cerámica y producción de cuero me permite cerrar la brecha entre el diseño técnico y los desafíos técnicos.",
+      skillGroups: [
+        { name: "Herramientas Digitales", items: ["Rhino", "AutoCAD", "Adobe Suite"] },
+        { name: "Producción", items: ["Corte", "Unión", "Modelado", "Ensamblaje"] },
+        { name: "Artesanía en Materiales", items: ["Reparación de Cuero", "Cerámica", "Tecnología Textil"] },
+        { name: "Estratégico", items: ["Gestión Creativa", "Diseño de Flujo de Trabajo", "Control de Calidad"] }
+      ],
+      languages: [
+        { name: "Alemán", level: "Nativo / Fluido" },
+        { name: "Turco", level: "Nativo / Fluido" },
+        { name: "Inglés", level: "Fluido" },
+        { name: "Español", level: "Intermedio" }
+      ]
+    },
+    contact: {
+      label: "Consulta",
+      title: "Conectemos",
+      description: "Si tienes alguna pregunta sobre mi proceso de diseño técnico, quieres discutir una posible colaboración o simplemente saludar, mi bandeja de entrada siempre está abierta.",
+      emailLabel: "Email",
+      phoneLabel: "Teléfono",
+      locationLabel: "Ubicación",
+      address: "Aschaffenburg, Alemania",
+      form: {
+        name: "Nombre Completo",
+        namePlaceholder: "Tu nombre",
+        email: "Correo Electrónico",
+        emailPlaceholder: "hola@ejemplo.com",
+        message: "Mensaje",
+        messagePlaceholder: "Cuéntame sobre tu proyecto...",
+        submit: "Enviar Mensaje"
+      }
+    },
+    footer: {
+      description: "Desarrolladora de Productos y Diseñadora Técnica explorando los límites entre lo físico y lo digital.",
+      built: "© 2026 Dilara Koç. Construido para lo Eterno."
+    },
+    privacy: {
+      title: "Política de Privacidad (GDPR)",
+      back: "Volver al Inicio",
+      sections: [
+        {
+          title: "1. Responsable del Tratamiento",
+          content: "El responsable del tratamiento de los datos en este sitio web es: Dilara Koç, Aschaffenburg, Alemania. Email: contact@derlara.uk."
+        },
+        {
+          title: "2. Alcance del Tratamiento",
+          content: "Procesamos los datos personales proporcionados a través de nuestro formulario de contacto (Nombre, Email, Mensaje). Este tratamiento se basa en el Art. 6(1)(b) GDPR para responder a sus consultas."
+        },
+        {
+          title: "3. Servicios de Terceros (Web3Forms)",
+          content: "Para el envío de formularios, utilizamos Web3Forms. Sus datos se transmiten de forma segura con el único fin de entregarlos en mi bandeja de entrada. No se utilizan cookies de seguimiento."
+        },
+        {
+          title: "4. Sus Derechos bajo el GDPR",
+          content: "Como residente del EEE/UE, tiene derecho a: Acceso (Art. 15), Rectificación (Art. 16), Supresión (Art. 17), Limitación (Art. 18) y Portabilidad de los Datos (Art. 20). También tiene derecho a presentar una reclamación ante una autoridad de control (Art. 77)."
+        },
+        {
+          title: "5. Retención de Datos",
+          content: "La información de contacto se almacena solo el tiempo necesario para cumplir con el propósito de su consulta o hasta que solicite su eliminación."
+        }
+      ],
+      date: "Fecha de Entrada en Vigor: 19 de abril de 2026"
     }
   }
 };

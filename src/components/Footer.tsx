@@ -20,7 +20,12 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="space-y-6">
-            <h4 className="text-xs uppercase tracking-widest font-semibold text-black">{t.contact.emailLabel && t.contact.phoneLabel ? 'Contact' : 'Kontakt'}</h4>
+            <h4 className="text-xs uppercase tracking-widest font-semibold text-black">
+              {language === 'en' ? 'Contact' : 
+               language === 'de' ? 'Kontakt' : 
+               language === 'es' ? 'Contacto' : 
+               'İletişim'}
+            </h4>
             <div className="space-y-4 font-inter text-[#6F6F6F]">
               <a href="mailto:contact@derlara.uk" className="flex items-center gap-3 hover:text-black transition-colors">
                 <Mail className="w-4 h-4" />

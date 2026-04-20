@@ -10,8 +10,20 @@ const SkillsAndCertifications: React.FC = () => {
 
   const certifications = [
     { title: "Indoor Skydiving Level 1", year: "2024" },
-    { title: t.language === 'en' ? "Yoga Teacher Training" : t.language === 'de' ? "Yogalehrer Ausbildung" : "Yoga Eğitmenlik Eğitimi", year: "2022-2023" },
-    { title: t.language === 'en' ? "Ayurveda Abhangam Massage" : t.language === 'de' ? "Ayurveda Abhangam Massage" : "Ayurveda Abhangam Masaj Eğitimi", year: "2023" },
+    { 
+      title: language === 'en' ? "Yoga Teacher Training" : 
+             language === 'de' ? "Yogalehrer Ausbildung" : 
+             language === 'es' ? "Formación de Profesores de Yoga" : 
+             "Yoga Eğitmenlik Eğitimi", 
+      year: "2022-2023" 
+    },
+    { 
+      title: language === 'en' ? "Ayurveda Abhangam Massage" : 
+             language === 'de' ? "Ayurveda Abhangam Massage" : 
+             language === 'es' ? "Masaje Ayurveda Abhangam" : 
+             "Ayurveda Abhangam Masaj Eğitimi", 
+      year: "2023" 
+    },
     { title: "Freediving Level 1", year: "2022" }
   ];
 
